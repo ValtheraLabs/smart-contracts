@@ -20,11 +20,47 @@ Initial areas of research:
 
 ## Preferred Stack
 
-- Solidity
+- Solidity ^0.8.24
 - Foundry
 - OpenZeppelin
 - Slither
 - Fuzz/invariant testing where appropriate
+
+## Setup
+
+Install Foundry:
+
+```sh
+curl -L https://foundry.paradigm.xyz | bash
+foundryup
+```
+
+Clone the repository and run the test suite:
+
+```sh
+git clone https://github.com/ValtheraLabs/smart-contracts.git
+cd smart-contracts
+forge test
+```
+
+For local environment variables, copy `.env.example` to `.env` and keep real RPC URLs, API keys, private keys, and seed phrases out of version control.
+
+## Project Structure
+
+```text
+smart-contracts/
+├── foundry.toml
+├── src/
+├── test/
+├── script/
+├── deployments/
+├── docs/
+└── .env.example
+```
+
+The current Solidity contract is a non-financial placeholder for validating the Foundry skeleton. The MVP does not include a token contract, mainnet deployment scripts, private keys, real RPC secrets, or unaudited financial logic.
+
+See `docs/ONCHAIN_SCOPE.md` for the MVP on-chain scope.
 
 ## Security Rule
 
